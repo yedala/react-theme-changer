@@ -1,0 +1,73 @@
+[data-theme="light"] {
+  --bg-color: white;
+  --text-color: black;
+}
+[data-theme="dark"] {
+  --bg-color: black;
+  --text-color: white;
+}
+.App {
+  font-family: sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+.section {
+  height: 92vh;
+  display: flex;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.navbar {
+  height: 8vh;
+  display: flex;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  justify-content: space-between;
+}
+.links {
+  gap: 10px;
+}
+.links a {
+  text-decoration: none;
+  padding: 3px;
+  margin-left: 5px;
+  color: inherit;
+}
+.mode {
+  margin-right: 10px;
+  gap: 9px;
+}
+.mode label {
+  margin-right: 16px;
+  position: relative;
+}
+.mode .slider {
+  position: absolute;
+  height: 18px;
+  width: 38px;
+  background-color: gray;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.mode input:checked + .slider {
+  background-color: rgb(145, 145, 235);
+}
+.mode .slider:before {
+  content: "";
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transition: 0.3s;
+  background-color: white;
+}
+.mode input:checked + .slider:before {
+  transform: translateX(20px);
+}
